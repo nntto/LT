@@ -1,448 +1,285 @@
 ---
-theme: penguin
-background: https://source.unsplash.com/collection/94734566/1920x1080
-class: text-center
+theme: "penguin"
+colorSchema: "auto"
+layout: intro
+# https://sli.dev/custom/highlighters.html
 highlighter: shiki
-lineNumbers: false
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
-drawings:
-  persist: false
-transition: slide-left
-title: Welcome to Slidev
-mdc: true
-download: true
+title: Slidev Penguin Theme
+fonts:
+  mono: "PT Mono"
+  sans: ["Open Sans", "Zen Kaku Gothic New"]
+  serif: "PT Serif"
 themeConfig:
-  eventLogo: "./logo/transparent.png"
+  eventLogo: "https://github.com/fluidicon.png"
+  eventUrl: "https://github.com/nntto/LT-202321030"
   twitter: "@NnttoDev"
   twitterUrl: "https://twitter.com/NnttoDev"
 ---
 
-# Welcome to Slidev
+## コマンドランチャーで始める生産性向上術
 
-Presentation slides for developers
+---
+layout: presenter
+presenterImage: '/icon.png'
+---
 
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
+# 自己紹介
+
+- 名前：志田
+- 出身・現在地：札幌
+- 趣味：行ったことのない場所に行くこと
+  - 知らない街, 山, 海，歴史的建造物
+- 最近のニュース
+  - 自作キーボードデビューしました（keyball）
+
+---
+
+# コマンドランチャー, 使ってますか？
+
+コマンドランチャーとは，<br>キーストロークのみでPC上の様々な操作を行えるようにするアプリケーションのこと．
+
+例えば，以下のようなアプリが有名です．
+- [PowerToys (Windows)](https://learn.microsoft.com/ja-jp/windows/powertoys/)
+- [ueil (Windows)](https://ueli.app/#/)
+- [Spotlight (Mac標準)](https://support.apple.com/ja-jp/guide/mac-help/mchlp1008/mac)
+- [Raycast (Mac)](https://www.Raycast.com/)
+- [Alfled (Mac)](https://www.alfredapp.com/)
+
+---
+layout: text-image
+media: '/Raycast.png'
+---
+
+# おすすめは Raycast
+
+なぜ？
+- 基本無料
+- UI/UXが良い
+  - 見た目が良い
+  - 操作が直感的で分かりやすく，簡単
+  - 設定画面が分かりやすい
+- プラグインを自作可能
+- コミュニティ作成のプラグインが充実
+- 注意：Mac のみ
+
+---
+layout: new-section
+---
+
+#  コマンドランチャーの基本機能を紹介
+
+ここから先は Raycast の機能を紹介していきますが，<br>コマンドランチャーの基本機能はどのアプリもほぼ同じです．  
+他のアプリケーションを選んでも，同等の体験が得られるはず（多分）
+
+<div align="center">
+<img src="/Raycast.png" style="width: 40%">
 </div>
 
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
+---
+layout: text-image
+media: '/Raycast search bar.png'
+---
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+# Search Bar
+
+Raycast を起動すると,  
+まず，Search Bar が表示される．
+
+Raycast の基本的な使い方は，Search Bar から  
+コマンドを検索して実行すること．
+
+以下のようなコマンドがある．
+- アプリの検索と起動
+- ファイルの検索
+- システム機能の利用
+- リンクを開く
+- スニペットの作成と利用
+- クリップボード履歴の管理
+- ウィンドウ位置の管理
+- プラグインで追加したコマンド
+
+---
+layout: new-section
+---
+
+# コマンドの紹介
+
+アプリの検索と起動
+
+ファイルの検索
+
+システム機能の利用
+
+リンクを開く
+
+プラグイン
 
 ---
 
-## transition: fade-out
+# アプリの検索と起動
 
-# What is Slidev?
+1. アプリケーション名を検索 2. Enter を押す
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
-<!--
-Here is another comment.
--->
-
----
-
-## layout: default
-
-# Table of contents
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-<Toc maxDepth="1"></Toc>
-
----
-
-transition: slide-up
-level: 2
-
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
-
----
-
-# Code
-
-Use code snippets and get the highlighting directly![^1]
-
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  role: string;
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id);
-  const newUser = { ...user, ...update };
-  saveUser(id, newUser);
-}
-```
-
-<arrow v-click="[3, 4]" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-
-## class: px-20
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="-t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-
-## preload: false
-
-# Animations
-
-Animations are powered by [@vueuse/motion](https://motion.vueuse.org/).
-
-```html
-<div v-motion :initial="{ x: -80 }" :enter="{ x: 0 }">Slidev</div>
-```
-
-<div class="w-60 relative mt-6">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute top-0 left-0 right-0 bottom-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 40, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
+<div align="center">
+<img src="/open app 1.png" style="width: 75%">
 </div>
 
 ---
 
-# LaTeX
+# アプリの検索と起動
 
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
+1. アプリケーション名を検索 2. Enter を押す
 
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-
-$$
-{1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
+<div align="center">
+<img src="/open app 2.png" style="width: 75%">
 </div>
 
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
 
-src: ./pages/multiple-entries.md
-hide: false
+# ファイルの検索
+
+1. Search Files コマンドを実行 2. キーワードを入力 3. Enter を押す
+<div align="center">
+<img src="/file search 1.png" style="width: 75%">
+</div>
 
 ---
 
+# ファイルの検索
+
+1. Search Files コマンドを実行 2. キーワードを入力 3. Enter を押す
+<div align="center">
+<img src="/file search 2.png" style="width: 75%">
+</div>
 ---
 
-layout: center
-class: text-center
+# システム機能の利用
+
+1. システム機能を検索 2. Enter を押す
+
+例えば，
+シャットダウン，再起動，スリープ，ゴミ箱を空にする，音量を上げる，下げる，etc...  
+
+<div align="center">
+<img src="/Raycast systems.png" style="width: 50%">
+</div>
 
 ---
 
-# Learn More
+# リンクを開く
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+リンクを検索 → Enter を押す
+<div align="center">
+<img src="/open link 1.png" style="width: 75%">
+</div>
+
+---
+
+# リンクを開く
+
+リンクを検索 → Enter を押す
+<div align="center">
+<img src="/open link 2.png" style="width: 75%">
+</div>
+
+---
+
+
+# リンクを開く: クエリを渡す．
+
+リンクにクエリを渡すことが可能  
+例： Google で"Raycast"を検索．("Search Google" を実行 → 検索クエリ"Raycast"を入力 → Enter を押す)
+
+<div align="center">
+<img src="/search 1.png" style="width: 75%">
+</div>
+
+---
+
+# リンクを開く: クエリを渡す．
+
+リンクにクエリを渡すことが可能  
+例： Google で"Raycast"を検索．("Search Google" を実行 → 検索クエリ"Raycast"を入力 → Enter を押す)
+
+<div align="center">
+<img src="/search 2.png" style="width: 75%">
+</div>
+
+---
+
+# リンクを開く: クエリを渡す．
+
+リンクにクエリを渡すことが可能  
+例： Google で"Raycast"を検索．("Search Google" を実行 → 検索クエリ"Raycast"を入力 → Enter を押す)
+
+<div align="center">
+<img src="/search 3.png" style="width: 75%">
+</div>
+
+---
+
+# リンクを開く: クエリを渡す．
+
+様々な情報を Raycast という一つのインターフェースから検索することができる，かなり便利．
+
+<div align="center">
+<img src="/Raycast searches.png" style="width: 65%">
+</div>
+
+---
+
+# プラグイン (Extensions)
+
+Raycast には，コミュニティーによって開発された1200以上のプラグインが存在する．  
+簡単インストールですぐに利用可能！
+欲しいコマンドがなければ，自分で開発してもOK！
+
+
+<div align="center">
+<img src="/Raycast extensions.png" style="width: 65%">
+</div>
+
+---
+
+# プラグイン (Extensions)
+
+例を一つだけ紹介
+
+---
+
+# プラグイン (Extensions): GitHub
+
+Raycast 上で Issue を立てられます
+
+<div align="center">
+<img src="/github issue.png" style="width: 70%">
+</div>
+
+---
+
+# プラグイン (Extensions): GitHub
+
+Raycast 上で通知を確認できます．
+
+<div align="center">
+<img src="/github notifications.png" style="width: 70%">
+</div>
+
+---
+
+# プラグイン (Extensions): GitHub
+
+Raycast 上で Workflow の実行履歴を確認できます．
+
+<div align="center">
+<img src="/github workflow.png" style="width: 70%">
+</div>
+
+---
+
+# まとめ
+
+コマンドランチャーは生産性向上に役立つ．
+
+自在にカスタマイズして，自分の作業に合わせた環境を作ろう！
