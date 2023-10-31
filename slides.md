@@ -121,7 +121,7 @@ layout: new-section
 1. アプリケーション名を検索 2. Enter を押す
 
 <div align="center">
-<img src="/open app 1.png" style="width: 75%">
+<img src="/open app 1.png" style="width: 50%">
 </div>
 
 ---
@@ -141,7 +141,7 @@ layout: new-section
 
 1. Search Files コマンドを実行 2. キーワードを入力 3. Enter を押す
 <div align="center">
-<img src="/file search 1.png" style="width: 75%">
+<img src="/file search 1.png" style="width: 50%">
 </div>
 
 ---
@@ -150,7 +150,7 @@ layout: new-section
 
 1. Search Files コマンドを実行 2. キーワードを入力 3. Enter を押す
 <div align="center">
-<img src="/file search 2.png" style="width: 75%">
+<img src="/file search 2.png" style="width: 50%">
 </div>
 ---
 
@@ -171,7 +171,7 @@ layout: new-section
 
 リンクを検索 → Enter を押す
 <div align="center">
-<img src="/open link 1.png" style="width: 75%">
+<img src="/open link 1.png" style="width: 50%">
 </div>
 
 ---
@@ -192,7 +192,7 @@ layout: new-section
 例： Google で"Raycast"を検索．("Search Google" を実行 → 検索クエリ"Raycast"を入力 → Enter を押す)
 
 <div align="center">
-<img src="/search 1.png" style="width: 75%">
+<img src="/search 1.png" style="width: 50%">
 </div>
 
 ---
@@ -203,7 +203,7 @@ layout: new-section
 例： Google で"Raycast"を検索．("Search Google" を実行 → 検索クエリ"Raycast"を入力 → Enter を押す)
 
 <div align="center">
-<img src="/search 2.png" style="width: 75%">
+<img src="/search 2.png" style="width: 50%">
 </div>
 
 ---
